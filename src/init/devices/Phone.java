@@ -1,10 +1,28 @@
 package init.devices;
 
+import java.util.Arrays;
+
 public class Phone {
 
     private  String phoneNumber;
     private  String model;
     private  double weight;
+
+
+    public Phone(){
+
+    }
+
+    public Phone(String phoneNumber, String model, double weight) {
+        this.phoneNumber = phoneNumber;
+        this.model = model;
+        this.weight = weight;
+    }
+
+    public Phone(String phoneNumber, String model) {
+        this.phoneNumber = phoneNumber;
+        this.model = model;
+    }
 
     public String getPhoneNumber() {
         return phoneNumber;
@@ -30,7 +48,15 @@ public class Phone {
         this.weight = weight;
     }
     public  void  receiveCall (String name){
-        System.out.println("Key it's" +  name + "is calling");
+        System.out.println("Key it's " +  name + " is calling");
+    }
+
+    public  void  receiveCall (String name,String phoneNumber){
+        System.out.println("Key it's " +  name + " is calling " + phoneNumber);
+    }
+
+    public  void  sendMessages(String ... phoneNumber){
+        System.out.println(Arrays.toString(phoneNumber));
     }
 
 }
